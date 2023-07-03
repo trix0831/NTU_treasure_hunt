@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stage 1</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #32404e;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    #inputBox {
+      width: 200px;
+      padding: 5px;
+    }
+
+    #message {
+      display: none;
+      color: #006699;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function checkAnswer() {
+      var userInput = document.getElementById("inputBox").value;
+      var answer = "負責人不能死";
+
+      if (userInput === answer) {
+        document.getElementById("message").style.display = "block";
+      } else {
+        document.getElementById("message").style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Stage 1</h1>
+  <label for="inputBox">Enter the answer:</label>
+  <input type="text" id="inputBox" oninput="checkAnswer()">
+
+  <p id="message">Correct answer! <a href="http://linktr.ee/cktfgscsummercamp" target="_blank">NEXT STAGE</a></p>
+</body>
+</html>
